@@ -16,19 +16,14 @@ export default function TourDates() {
         <h2 className="text-3xl font-bold mb-8 text-center">Próximos Shows</h2>
         <div className="space-y-6">
           {shows.map((s) => (
-            <div key={s.date} className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-4">
-              <div className="text-left">
+            <div key={s.date} className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-4 text-center md:text-left">
+              <div>
                 <p className="font-semibold">{new Date(`${s.date}T00:00:00`).toLocaleDateString("pt-BR", { day: '2-digit', month: 'long' })}</p>
                 <p>{s.city} &middot; {s.venue}</p>
               </div>
               <a href={s.link} target="_blank" rel="noopener noreferrer" className="mt-2 md:mt-0 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-full text-sm">
                 Ingressos
               </a>
-              {/* {s.link && (
-                <a href={s.link} className="mt-2 md:mt-0 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-full text-sm">
-                  Ingressos
-                </a>
-              )} */}
             </div>
           ))}
         </div>

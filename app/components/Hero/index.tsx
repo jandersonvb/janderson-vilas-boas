@@ -4,13 +4,19 @@ import Link from "next/link"
 export default function Hero() {
   return (
     <div className="relative w-full h-screen bg-gray-900 text-white">
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 flex items-center justify-center opacity-30">
         <Image
-          src="/J2.png"
+          src="/J4.jpg"
           alt="Background"
-          layout="fill"
-          objectFit="contain"
+          className="object-cover w-full h-full"
+          objectFit="cover"
           quality={100}
+          fill
+          style={{
+            objectFit: "cover",
+            objectPosition: "center"
+          }}
+
         />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
@@ -24,8 +30,6 @@ export default function Hero() {
         >
           Próximos Shows
         </Link>
-
-
       </div>
     </div >
   )
