@@ -12,8 +12,8 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Janderson Vilas Boas",
-  description: "Cantor sertanejo.",
+  title: 'Janderson Vilas Boas - Site Oficial',
+  description: 'Cantor Sertanejo - Agenda, Contato e Redes Sociais',
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.variable} bg-gray-900 text-gray-100 antialiased`}
+        className={`${inter.variable} bg-gray-50 text-gray-900 antialiased`}
       >
         {children}
       </body>
